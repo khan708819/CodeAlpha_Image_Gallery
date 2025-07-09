@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <!-- Image Gallery -->
+  <div class="gallery">
+    <div class="image nature"><img src="img1.jpeg" alt="Nature 1" onclick="openLightbox(this.src)" /></div>
+    <div class="image city"><img src="city1.jpeg" alt="City 1" onclick="openLightbox(this.src)" /></div>
+    <div class="image nature"><img src="img2.jpeg" alt="Nature 2" onclick="openLightbox(this.src)" /></div>
+    <div class="image city"><img src="city2.jpeg" alt="City 2" onclick="openLightbox(this.src)" /></div>
+    <!-- Add more as needed -->
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="nav-buttons">
+      <button onclick="prevImage()">❮</button>
+      <button onclick="nextImage()">❯</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
